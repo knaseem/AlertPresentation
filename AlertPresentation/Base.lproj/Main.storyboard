@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TnM-Mw-Kfn">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OP8-z5-Fwr">
+            <objects>
+                <tabBarController id="TnM-Mw-Kfn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="o1P-Yq-wMV"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gmK-Nb-CWO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ong-ga-uCU" kind="relationship" relationship="viewControllers" id="0Qq-9S-5hI"/>
+                        <segue destination="CYB-Mu-Kif" kind="relationship" relationship="viewControllers" id="bCm-s4-G61"/>
+                        <segue destination="DsT-iw-STn" kind="relationship" relationship="viewControllers" id="gfB-kg-HwZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sog-RQ-vgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3660" y="143"/>
+        </scene>
+        <!--Alert-->
+        <scene sceneID="San-Y4-bGL">
+            <objects>
+                <viewController id="ong-ga-uCU" customClass="AlertViewController" customModule="AlertPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ooi-81-PJm"/>
+                        <viewControllerLayoutGuide type="bottom" id="nYx-4y-8M0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vL0-Gk-0hy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ios-P8-RyV">
+                                <rect key="frame" x="262.5" y="285" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlertButtonTapped:" destination="ong-ga-uCU" eventType="touchUpInside" id="2ee-Fi-Di8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.079418243779999995" green="1" blue="0.85628977159999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ios-P8-RyV" firstAttribute="centerY" secondItem="vL0-Gk-0hy" secondAttribute="centerY" id="5Rc-DX-Fyz"/>
+                            <constraint firstItem="Ios-P8-RyV" firstAttribute="centerX" secondItem="vL0-Gk-0hy" secondAttribute="centerX" id="c2h-9t-fyt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Alert" id="SMj-6z-Laf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZC0-2e-yYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2176" y="-249"/>
+        </scene>
+        <!--Action-->
+        <scene sceneID="fTg-Op-xMg">
+            <objects>
+                <viewController id="CYB-Mu-Kif" customClass="ActionViewController" customModule="AlertPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dIS-tS-OFh"/>
+                        <viewControllerLayoutGuide type="bottom" id="jwR-3w-aqT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ohf-bR-MMr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHF-gw-KAx">
+                                <rect key="frame" x="257" y="285" width="86" height="30"/>
+                                <state key="normal" title="Show Action"/>
+                                <connections>
+                                    <action selector="showActionButtonTapped:" destination="CYB-Mu-Kif" eventType="touchUpInside" id="qwD-VH-PPi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rHF-gw-KAx" firstAttribute="centerY" secondItem="ohf-bR-MMr" secondAttribute="centerY" id="96a-ET-SSk"/>
+                            <constraint firstItem="rHF-gw-KAx" firstAttribute="centerX" secondItem="ohf-bR-MMr" secondAttribute="centerX" id="ikq-ra-yf9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Action" id="EY7-0E-fcD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9c-B1-AQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2183" y="409"/>
+        </scene>
+        <!--Presentation-->
+        <scene sceneID="jmp-DK-wzX">
+            <objects>
+                <navigationController id="DsT-iw-STn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Presentation" id="ROs-Qj-bd3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eky-wt-nrl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3oZ-ty-VCX" kind="relationship" relationship="rootViewController" id="R1K-9D-usA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1tg-Ae-F0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3669" y="1129"/>
+        </scene>
+        <!--PopOver Presentation-->
+        <scene sceneID="77J-G8-fOC">
+            <objects>
+                <viewController id="3oZ-ty-VCX" customClass="PresentationViewController" customModule="AlertPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach07.jpg" id="LhC-Zw-YWa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <tabBarItem key="tabBarItem" title="Presentation" id="FOH-H2-H4g" userLabel="Presentation"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="PopOver Presentation" id="Lln-ca-6FH">
+                        <barButtonItem key="rightBarButtonItem" title="Action" id="KL9-cZ-dV4">
+                            <connections>
+                                <action selector="popoverButtonTapped:" destination="3oZ-ty-VCX" id="Kkb-SP-Spq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPt-ZN-dGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2918" y="1123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ohx-un-kuP">
+            <objects>
+                <viewController storyboardIdentifier="InformationViewController" id="Jya-Rs-cDR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wyQ-oL-waL"/>
+                        <viewControllerLayoutGuide type="bottom" id="5go-Hz-oar"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kRm-jm-prr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JEd-na-oST">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Presentation Controller:          This creates a reference to the Main.storyboard file and then instantiates the view controller in this storyboard with an identifier of InformationViewController. It then sets this view controller's modal presentation style to popover, which will make the view controller appear as a popover on regular-width screens.
+
+Next, you get the view controller’s popoverPresentationController property and set its barButtonItem property. This specifies the bar button item on which the popover will be anchored. When presented, the popover’s arrow will point to the specified item. You could specify the anchor location by setting the sourceView and sourceRect properties like you did earlier.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JEd-na-oST" firstAttribute="top" secondItem="wyQ-oL-waL" secondAttribute="bottom" id="Ejl-A2-P6d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JEd-na-oST" secondAttribute="trailing" id="PCL-72-G0k"/>
+                            <constraint firstItem="JEd-na-oST" firstAttribute="leading" secondItem="kRm-jm-prr" secondAttribute="leadingMargin" id="e8d-Wj-D1M"/>
+                            <constraint firstItem="5go-Hz-oar" firstAttribute="top" secondItem="JEd-na-oST" secondAttribute="bottom" id="hPX-dp-5Jk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5D-Ai-NzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2311" y="1125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beach07.jpg" width="640" height="480"/>
+    </resources>
+</document>
